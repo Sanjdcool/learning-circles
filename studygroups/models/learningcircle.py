@@ -83,7 +83,7 @@ class StudyGroup(LifeTimeTrackingModel):
     course_rating_reason = models.TextField(blank=True)
 
     attach_ics = models.BooleanField(default=True) # TODO Remove this
-    did_not_happen = models.NullBooleanField(blank=True, null=True)  # Used by the facilitator to report if the learning circle didn't happen
+    did_not_happen = models.NullBooleanField(blank=True, null=True)  # Used by the facilitator to report if the learning circle didn't happen. TODO will be removed Djagno >= 4.0
     learner_survey_sent_at = models.DateTimeField(blank=True, null=True)
     facilitator_survey_sent_at = models.DateTimeField(blank=True, null=True)
 

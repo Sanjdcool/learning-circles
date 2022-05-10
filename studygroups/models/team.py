@@ -75,7 +75,7 @@ class TeamInvitation(models.Model):
     role = models.CharField(max_length=256, choices=TeamMembership.ROLES)
     created_at = models.DateTimeField(auto_now_add=True)
     responded_at = models.DateTimeField(null=True, blank=True)
-    joined = models.NullBooleanField(null=True)
+    joined = models.NullBooleanField(null=True) # TODO will be removed Djagno >= 4.0
 
     def __str__(self):
         return 'Invitation <{} to join {}>'.format(self.email, self.team.name)
